@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Carlos Eduardo T. Yalung BSIT 3-D -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Pickleball Courts</title>
+    <title>Pickleball Court Reservation</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <header>
-        <nav>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">AAA</a>
+            </div>
             <ul class="nav-links">
-                <li><a href="#page1">Page 1</a></li>
-                <li><a href="#page2">Page 2</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reserve" class="btn-reserve">Reserve court</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-  
-        <section id="page1" class="page-section">
+        <!-- Home Section -->
+        <section id="home" class="page-section">
             <div class="courts-wrapper">
-             
                 <div class="court">
                     <div class="court-half"></div>
                     <div class="kitchen-zone"></div>
@@ -38,21 +43,126 @@
 
             <div class="info-section">
                 <div class="info-card">
-                    <h2>This is sample good title</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipis
-                    cing elit. Praesentium iure quisquam unde hic natus fuga similique ea! Sint
-                     nulla blanditiis voluptates enim voluptate perspiciatis quae. Autem nisi
-                      tenere excepturi vel.</p>
-                    <a href="#" class="learn-more-btn">Learn More</a>
+                    <h2>Welcome to AAA Pickleball Courts</h2>
+                    <p>Experience top-tier playing conditions with our professionally designed courts. Whether you're practicing your dinks or playing a competitive match, we provide the ideal space for players of all skill levels.</p>
+                    <a href="#about" class="learn-more-btn">Learn More</a>
                 </div>
             </div>
         </section>
 
-        <section id="page2" class="page-section">
-            <div class="blank-container"></div>
-            <h1>Page 2</h1>
+        <!-- About Section -->
+        <section id="about" class="page-section">
+            <div class="info-card content-card">
+                <h1 class="page-title-heading">About Pickleball</h1>
+                <p>Pickleball is a fun paddle sport created for all skill levels that combines elements of tennis, badminton, and table tennis. Played on a small court with a perforated plastic ball, it is easy to learn yet fast-paced and competitive.</p>
+                <p>At <strong>AAA Courts</strong>, we provide state-of-the-art facilities, premium outdoor/indoor surfacing, and a welcoming community for casual and pro players alike.</p>
+            </div>
         </section>
+
+        <!-- Contact Us Section (With "Leave a Message" side-by-side) -->
+        <section id="contact" class="page-section contact-wrapper">
+            <div class="contact-header">
+                <h1 class="contact-title">Contact us</h1>
+                <span class="contact-subtitle">A question about the court? Let's talk.</span>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left Side: Contact Information -->
+                <div class="contact-info">
+                    <h2>Your next game starts here.</h2>
+                    <p class="sub-text">Ask about reserving a court, planning a game with friends, or getting to know AAA Pickle Ball.</p>
+
+                    <div class="info-item">
+                        <label>Email</label>
+                        <p class="value">hello@example.com</p>
+                        <span class="hint">Placeholder</span>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Phone</label>
+                        <p class="value">Add your phone number</p>
+                        <span class="hint">Placeholder</span>
+                    </div>
+
+                    <div class="info-item">
+                        <label>Find the court</label>
+                        <p class="value">Add your court address</p>
+                        <span class="hint">Placeholder</span>
+                    </div>
+
+                    <p class="visit-note">Planning a visit? Include your preferred date, time, and number of players in your message. A reservation is only confirmed once the team replies.</p>
+                </div>
+
+                <!-- Right Side: Leave a Message Form -->
+                <div class="message-card">
+                    <h2>Leave a message</h2>
+                    <p class="form-preview-text">Form preview: sending is unavailable until a contact service is connected.</p>
+
+                    <form action="#" method="POST" class="message-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="msg-name">Your name (required)</label>
+                                <input type="text" id="msg-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="msg-email">Email address (required)</label>
+                                <input type="email" id="msg-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="msg-help">What can we help with?</label>
+                            <select id="msg-help" name="help_type">
+                                <option value="general">General question</option>
+                                <option value="reservation">Reservation inquiry</option>
+                                <option value="event">Event planning</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="msg-body">Your message (required)</label>
+                            <textarea id="msg-body" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-send-message">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reserve a Court Section (Moved below Contact section) -->
+        <section id="reserve" class="page-section">
+            <div class="info-card content-card">
+                <h1 class="page-title-heading">Reserve a Court</h1>
+                <p>Fill out your details to book your session.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="res-name">Full Name</label>
+                        <input type="text" id="res-name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-email">Email Address</label>
+                        <input type="email" id="res-email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="court-select">Court</label>
+                        <select id="court-select" name="court" required>
+                            <option value="">-- Choose Court --</option>
+                            <option value="court-1">Court 1</option>
+                            <option value="court-2">Court 2</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Book Court</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
+    <footer id="footer">
+        <p>&copy; 2026 AAA Pickleball Courts. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
